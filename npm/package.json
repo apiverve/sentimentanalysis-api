@@ -1,9 +1,18 @@
 {
   "name": "@apiverve/sentimentanalysis",
-  "version": "1.1.12",
+  "version": "1.1.13",
   "description": "Sentiment Analysis is a simple tool for analyzing the sentiment of a text. It returns the sentiment score and the sentiment label.",
   "main": "index.js",
   "types": "index.d.ts",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "LICENSE"
+  ],
   "scripts": {
     "test": "mocha",
     "example": "node examples/basic.js"
@@ -14,14 +23,18 @@
     "directory": "npm"
   },
   "keywords": [
-    "sentiment analysis", "sentiment analysis api", "sentiment analysis tool", "sentiment analysis software", "sentiment analysis service"
+    ""
   ],
-  "author": "APIVerve <hello@apiverve.com> (http://apiverve.com/)",
+  "author": {
+    "name": "APIVerve",
+    "email": "hello@apiverve.com",
+    "url": "https://apiverve.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/apiverve/sentimentanalysis-api/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/sentimentanalysis?utm_source=npm",
+  "homepage": "https://sentimentanalysis.apiverve.com?utm_source=npm&utm_medium=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
