@@ -1,1 +1,3 @@
-from .apiClient import SentimentanalysisAPIClient
+from .apiClient import SentimentanalysisAPIClient, SentimentanalysisAPIClientError
+
+__all__ = ['SentimentanalysisAPIClient', 'SentimentanalysisAPIClientError']
