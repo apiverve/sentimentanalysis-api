@@ -26,7 +26,7 @@ Add the dependency:
 
 ```gradle
 dependencies {
-    implementation 'com.github.apiverve:sentimentanalysis-api:1.1.13'
+    implementation 'com.github.apiverve:sentimentanalysis-api:1.1.14'
 }
 ```
 
@@ -47,7 +47,7 @@ SentimentAnalysisAPIClient client = new SentimentAnalysisAPIClient("YOUR_API_KEY
 try {
     // Prepare request parameters
     Map<String, Object> parameters = new HashMap<>();
-    parameters.put("text", "");
+    parameters.put("text", "I'm so excited that tomorrow is going to be sunny! Can't wait!");
 
     // Execute the request
     APIResponse response = client.execute(parameters);
