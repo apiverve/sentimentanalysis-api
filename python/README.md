@@ -218,8 +218,9 @@ from apiverve_sentimentanalysis.apiClient import SentimentanalysisAPIClient
 
 api = SentimentanalysisAPIClient("[YOUR_API_KEY]")
 
+query = { "text": "I'm so excited that tomorrow is going to be sunny! Can't wait!" }
+
 try:
-    query = { "text": "I'm so excited that tomorrow is going to be sunny! Can't wait!" }
     result = api.execute(query)
     print(result)
 finally:
