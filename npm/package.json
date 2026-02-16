@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/sentimentanalysis",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "Sentiment Analysis is a simple tool for analyzing the sentiment of a text. It returns the sentiment score and the sentiment label.",
   "main": "index.js",
   "types": "index.d.ts",
