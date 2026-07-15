@@ -14,14 +14,20 @@ API_URL = 'https://api.apiverve.com/v1/sentimentanalysis'
 
 def call_sentimentanalysis_api():
     """
-    Make a GET request to the Sentiment Analysis API
+    Make a POST request to the Sentiment Analysis API
     """
     try:
+        # Request body
+        request_body &#x3D; {
+    &#x27;text&#x27;: &#x27;I&#x27;m so excited that tomorrow is going to be sunny! Can&#x27;t wait!&#x27;
+}
+
         headers = {
-            'x-api-key': API_KEY
+            'x-api-key': API_KEY,
+            'Content-Type': 'application/json'
         }
 
-        response = requests.get(API_URL, headers=headers)
+        response = requests.post(API_URL, headers=headers, json=request_body)
 
         # Raise exception for HTTP errors
         response.raise_for_status()
