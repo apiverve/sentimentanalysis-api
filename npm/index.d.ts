@@ -4,18 +4,33 @@ declare module '@apiverve/sentimentanalysis' {
     secure?: boolean;
   }
 
+  /**
+   * Describes fields the current plan does not unlock. Locked fields arrive as null
+   * in `data`; `locked_fields` names them, using dot paths for nested fields.
+   * Absent when the plan unlocks everything.
+   */
+  export interface PremiumInfo {
+    message: string;
+    upgrade_url: string;
+    locked_fields: string[];
+  }
+
   export interface sentimentanalysisResponse {
     status: string;
     error: string | null;
     data: SentimentAnalysisData;
     code?: number;
+    premium?: PremiumInfo;
   }
 
 
   interface SentimentAnalysisData {
-      comparative:   number;
-      sentimentText: string;
-      sentiment:     number;
+      comparative:     number | null;
+      sentimentText:   null | string;
+      sentiment:       number | null;
+      isPositive:      boolean | null;
+      isNegative:      boolean | null;
+      normalizedScore: number | null;
   }
 
   export default class sentimentanalysisWrapper {
