@@ -124,7 +124,10 @@ async function makeRequest() {
   "data": {
     "comparative": 0.25,
     "sentimentText": "positive",
-    "sentiment": 3
+    "sentiment": 3,
+    "isPositive": true,
+    "isNegative": false,
+    "normalizedScore": 0.3
   }
 }
 ```
