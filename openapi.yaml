@@ -46,6 +46,9 @@ paths:
                   comparative: 0.25
                   sentimentText: positive
                   sentiment: 3
+                  isPositive: true
+                  isNegative: false
+                  normalizedScore: 0.3
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
