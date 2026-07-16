@@ -25,17 +25,41 @@ namespace APIVerve.API.SentimentAnalysis
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
     {
         [JsonProperty("comparative")]
-        public double Comparative { get; set; }
+        public double? Comparative { get; set; }
 
         [JsonProperty("sentimentText")]
         public string SentimentText { get; set; }
 
         [JsonProperty("sentiment")]
-        public long Sentiment { get; set; }
+        public long? Sentiment { get; set; }
+
+        [JsonProperty("isPositive")]
+        public bool? IsPositive { get; set; }
+
+        [JsonProperty("isNegative")]
+        public bool? IsNegative { get; set; }
+
+        [JsonProperty("normalizedScore")]
+        public double? NormalizedScore { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
