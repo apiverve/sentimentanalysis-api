@@ -1,13 +1,12 @@
 Sentiment Analysis API
 ============
 
-Sentiment Analysis is a simple tool for analyzing the sentiment of a text. It returns the sentiment score and the sentiment label.
+Sentiment Analysis evaluates the emotional tone of any text string. It returns an AFINN valence score, a comparative word-normalized score, and a five-tier sentiment label from very negative to very positive.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Python API Wrapper for the [Sentiment Analysis API](https://sentimentanalysis.apiverve.com?utm_source=pypi&utm_medium=readme)
+[![PyPI version](https://img.shields.io/pypi/v/apiverve-sentimentanalysis.svg)](https://pypi.org/project/apiverve-sentimentanalysis/)
+
+This is a Python wrapper for the [Sentiment Analysis API](https://apiverve.com/marketplace/sentimentanalysis?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -29,8 +28,8 @@ pip3 install apiverve-sentimentanalysis
 
 ## Configuration
 
-Before using the sentimentanalysis API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=readme)
+Before using the Sentiment Analysis API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -60,7 +59,7 @@ except Exception as e:
 
 ## Usage
 
-The Sentiment Analysis API documentation is found here: [https://docs.apiverve.com/ref/sentimentanalysis](https://docs.apiverve.com/ref/sentimentanalysis?utm_source=pypi&utm_medium=readme).
+The Sentiment Analysis API documentation is found here: [https://docs.apiverve.com/ref/sentimentanalysis](https://docs.apiverve.com/ref/sentimentanalysis?utm_source=pypi&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
@@ -104,7 +103,10 @@ print(result)
   "data": {
     "comparative": 0.25,
     "sentimentText": "positive",
-    "sentiment": 3
+    "sentiment": 3,
+    "isPositive": true,
+    "isNegative": false,
+    "normalizedScore": 0.3
   }
 }
 ```
@@ -232,7 +234,7 @@ finally:
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -243,12 +245,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
