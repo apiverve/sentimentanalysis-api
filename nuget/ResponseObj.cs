@@ -49,6 +49,54 @@ namespace APIVerve.API.SentimentAnalysis
 
         [JsonProperty("normalizedScore")]
         public double? NormalizedScore { get; set; }
+
+        [JsonProperty("magnitude")]
+        public long? Magnitude { get; set; }
+
+        [JsonProperty("positiveWords")]
+        public string[] PositiveWords { get; set; }
+
+        [JsonProperty("negativeWords")]
+        public object[] NegativeWords { get; set; }
+
+        [JsonProperty("modelSentiment")]
+        public string ModelSentiment { get; set; }
+
+        [JsonProperty("modelScore")]
+        public double? ModelScore { get; set; }
+
+        [JsonProperty("isMixed")]
+        public bool? IsMixed { get; set; }
+
+        [JsonProperty("sentences")]
+        public Sentence[] Sentences { get; set; }
+    }
+
+    public partial class Sentence
+    {
+        [JsonProperty("text")]
+        public string Text { get; set; }
+
+        [JsonProperty("label")]
+        public string Label { get; set; }
+
+        [JsonProperty("confidence")]
+        public double? Confidence { get; set; }
+
+        [JsonProperty("scores")]
+        public Scores Scores { get; set; }
+    }
+
+    public partial class Scores
+    {
+        [JsonProperty("positive")]
+        public double? Positive { get; set; }
+
+        [JsonProperty("neutral")]
+        public double? Neutral { get; set; }
+
+        [JsonProperty("negative")]
+        public double? Negative { get; set; }
     }
 
     public partial class Premium
