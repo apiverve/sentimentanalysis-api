@@ -31,6 +31,26 @@ declare module '@apiverve/sentimentanalysis' {
       isPositive:      boolean | null;
       isNegative:      boolean | null;
       normalizedScore: number | null;
+      magnitude:       number | null;
+      positiveWords:   (null | string)[];
+      negativeWords:   any[];
+      modelSentiment:  null | string;
+      modelScore:      number | null;
+      isMixed:         boolean | null;
+      sentences:       Sentence[];
+  }
+  
+  interface Sentence {
+      text:       null | string;
+      label:      null | string;
+      confidence: number | null;
+      scores:     Scores;
+  }
+  
+  interface Scores {
+      positive: number | null;
+      neutral:  number | null;
+      negative: number | null;
   }
 
   export default class sentimentanalysisWrapper {
