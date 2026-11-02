@@ -1,10 +1,10 @@
 [project]
 name = "apiverve-sentimentanalysis"
-version = "1.2.3"
+version = "1.2.4"
 authors = [
   { name="APIVerve", email="hello@apiverve.com" },
 ]
-description = "Sentiment Analysis evaluates the emotional tone of any text string. It returns an AFINN valence score, a comparative word-normalized score, and a five-tier sentiment label from very negative to very positive."
+description = "Sentiment Analysis evaluates the emotional tone of any text string. It returns an AFINN valence score, a comparative word-normalized score, and a five-tier sentiment label from very negative to very positive. Paid plans add sentence-level labels from a transformer model, a mixed-sentiment flag, magnitude, and the words that drove the score."
 keywords = ["sentiment analysis api", "sentiment api", "free sentiment analysis api", "social media sentiment analysis api", "text analysis api"]
 readme = "README.md"
 requires-python = ">=3.9"
