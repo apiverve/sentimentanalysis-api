@@ -1,6 +1,6 @@
 # Sentiment Analysis API - PHP Package
 
-Sentiment Analysis evaluates the emotional tone of any text string. It returns an AFINN valence score, a comparative word-normalized score, and a five-tier sentiment label from very negative to very positive.
+Sentiment Analysis evaluates the emotional tone of any text string. It returns an AFINN valence score, a comparative word-normalized score, and a five-tier sentiment label from very negative to very positive. Paid plans add sentence-level labels from a transformer model, a mixed-sentiment flag, magnitude, and the words that drove the score.
 
 ## Installation
 
@@ -74,7 +74,37 @@ $client = new Client(
     "sentiment": 3,
     "isPositive": true,
     "isNegative": false,
-    "normalizedScore": 0.3
+    "normalizedScore": 0.3,
+    "magnitude": 3,
+    "positiveWords": [
+      "excited"
+    ],
+    "negativeWords": [],
+    "modelSentiment": "positive",
+    "modelScore": 0.98,
+    "isMixed": false,
+    "sentences": [
+      {
+        "text": "I'm so excited that tomorrow is going to be sunny!",
+        "label": "positive",
+        "confidence": 0.992,
+        "scores": {
+          "positive": 0.992,
+          "neutral": 0.006,
+          "negative": 0.002
+        }
+      },
+      {
+        "text": "Can't wait!",
+        "label": "positive",
+        "confidence": 0.973,
+        "scores": {
+          "positive": 0.973,
+          "neutral": 0.024,
+          "negative": 0.003
+        }
+      }
+    ]
   }
 }
 ```
