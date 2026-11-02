@@ -1,6 +1,6 @@
 # [Sentiment Analysis API](https://apiverve.com/marketplace/sentimentanalysis?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-Sentiment Analysis evaluates the emotional tone of any text string. It returns an AFINN valence score, a comparative word-normalized score, and a five-tier sentiment label from very negative to very positive.
+Sentiment Analysis evaluates the emotional tone of any text string. It returns an AFINN valence score, a comparative word-normalized score, and a five-tier sentiment label from very negative to very positive. Paid plans add sentence-level labels from a transformer model, a mixed-sentiment flag, magnitude, and the words that drove the score.
 
 The Sentiment Analysis API provides a simple, reliable way to integrate sentiment analysis functionality into your applications. Built for developers who need production-ready sentiment analysis capabilities without the complexity of building from scratch.
 
@@ -222,7 +222,37 @@ A real response from the Sentiment Analysis API:
     "sentiment": 3,
     "isPositive": true,
     "isNegative": false,
-    "normalizedScore": 0.3
+    "normalizedScore": 0.3,
+    "magnitude": 3,
+    "positiveWords": [
+      "excited"
+    ],
+    "negativeWords": [],
+    "modelSentiment": "positive",
+    "modelScore": 0.98,
+    "isMixed": false,
+    "sentences": [
+      {
+        "text": "I'm so excited that tomorrow is going to be sunny!",
+        "label": "positive",
+        "confidence": 0.992,
+        "scores": {
+          "positive": 0.992,
+          "neutral": 0.006,
+          "negative": 0.002
+        }
+      },
+      {
+        "text": "Can't wait!",
+        "label": "positive",
+        "confidence": 0.973,
+        "scores": {
+          "positive": 0.973,
+          "neutral": 0.024,
+          "negative": 0.003
+        }
+      }
+    ]
   }
 }
 ```
